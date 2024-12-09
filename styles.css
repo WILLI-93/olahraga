@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Slider */
+.slider {
+    width: fit-content; /* Lebar slider */
+    height: 400px; /* Tinggi slider */
+    margin: 20px auto; /* Slider berada di tengah */
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: calc(300%); /* Total lebar semua slide */
+    animation: slide-animation 9s linear infinite; /* Animasi berjalan */
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 400px; /* Lebar setiap slide */
+    height: 400px; /* Tinggi setiap slide */
+}
+
+.slide img {
+    width: 400px; /* Sesuai lebar slider */
+    height: 400px; /* Sesuai tinggi slider */
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+/* Keyframes untuk slider */
+@keyframes slide-animation {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-400px); /* Geser ke slide kedua */
+    }
+    66.66% {
+        transform: translateX(-800px); /* Geser ke slide ketiga */
+    }
+    100% {
+        transform: translateX(0); /* Kembali ke slide pertama */
+    }
+}
+
+/* Landing Page */
+.landing {
+    background: url('https://images.unsplash.com/photo-1601492090261-ece33f91a063') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing .content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
